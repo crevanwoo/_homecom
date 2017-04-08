@@ -1,0 +1,200 @@
+/* author Kobenko Anastasia 
+email stasya.job@outlook.com
+git https://github.com/crevanwoo
+*/
+@font-face {
+  font-family: Light;
+  src: url(../fonts/GothamProLight.ttf); }
+
+@font-face {
+  font-family: Regular;
+  src: url(../fonts/GothamProRegular.ttf); }
+
+@font-face {
+  font-family: Medium;
+  src: url(../fonts/GothamProMedium.ttf); }
+
+@font-face {
+  font-family: Bold;
+  src: url(../fonts/GothamProBold.ttf); }
+
+/*Elem sizes */
+/*Breakpoints*/
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+* {
+  box-sizing: border-box;
+  background-repeat: no-repeat; }
+
+input {
+  border: none; }
+  input:focus {
+    outline: none; }
+  input[type="file"] {
+    display: none; }
+
+textarea {
+  border: none;
+  resize: none; }
+  textarea:focus {
+    outline: none; }
+
+button {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  border: none;
+  padding: 0; }
+  button:focus {
+    outline: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-weight: normal; }
+
+a:link, a:visited, a:active, a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+html {
+  font-size: 16px;
+  height: 100vh; }
+
+body {
+  height: 100%;
+  font-family: Regular;
+  font-size: 16px; }
+
+.general_wrapper {
+  min-height: 100%;
+  padding-bottom: 100px; }
+
+.wrapper {
+  width: 1200px;
+  margin: auto; }
+
+.bttn {
+  cursor: pointer; }
+
+.h1 {
+  font-size: 45px; }
+
+.h2 {
+  font-size: 40px; }
+
+.h3 {
+  font-size: 35px; }
+
+.h4 {
+  font-size: 30px; }
+
+.h5 {
+  font-size: 25px; }
+
+.h6 {
+  font-size: 20px; }
+
+/*.slick-arrow {
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	background-image: url(../images/next-prev.png);
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 0px;
+	z-index: 1;
+}
+
+.slick-next {
+	right: 0;
+	background-position: 0px -55px;
+}
+
+.slick-prev {
+	left: 0;
+	background-position: 0px 0px;
+}
+
+.slick-dots {
+	font-size: 0;
+	li {
+		display: inline-block;
+		margin-left: 3px;
+		button {
+			padding: 0;
+			width: 10px;
+			height: 10px;
+			border: 1px solid #ccc;
+			font-size: 0;
+			border-radius: 50%;
+		}
+		&.slick-active {
+			button {
+				width: 10px;
+				height: 10px;
+				border: none;
+			}
+		}
+	}
+}
+
+.slick-track,
+.slick-slide {
+	&:focus {
+		outline: none;
+	}
+}
+
+.modal_window {
+	opacity: 0;
+	transition-duration: 0.5s;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 100;
+	&.visible {
+		opacity: 1;
+	}
+	.close {
+		background-image: url(../images/modal_close.png);
+		width: 66px;
+		height: 66px;
+		position: absolute;
+		top: -6px;
+		right: -10px;
+		cursor: pointer;
+	}
+}
+
+.input {
+	position: relative;
+	display: inline-block;
+	// margin-bottom: 50px;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 20px;
+		top: 50%;
+		width: 17px;
+		height: 20px;
+		transform: translateY(-50%);
+		background-size: 100% 100%;
+	}
+}*/

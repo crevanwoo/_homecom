@@ -1,0 +1,110 @@
+@font-face {
+    font-family: Light;
+    src: url(../fonts/GothamProLight.ttf)
+}
+
+@font-face {
+    font-family: Regular;
+    src: url(../fonts/GothamProRegular.ttf)
+}
+
+@font-face {
+    font-family: Medium;
+    src: url(../fonts/GothamProMedium.ttf)
+}
+
+@font-face {
+    font-family: Bold;
+    src: url(../fonts/GothamProBold.ttf)
+}
+
+$black_shim: rgba(0, 0, 0, 0.55);
+
+$trans: 0.3s;
+
+//font
+
+//bg
+
+//border
+
+/*Elem sizes */
+
+$header_height: 70px;
+$footer_height: 100px;
+$input_padding: 20px;
+/*Breakpoints*/
+$desktop: 1200px;
+$laptop: 900px;
+$tablet: 500px;
+
+%clear {
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+%shim {
+    &:before {
+        content: ''; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $black_shim;
+    }
+}
+
+
+
+@mixin bp($size) {
+    @if $size==desktop {
+        @media screen and (max-width: $desktop) {
+            @content;
+        }
+    }
+	 @elseif $size==laptop {
+        @media screen and (min-width: $laptop) and (max-width: $desktop - 1px){
+            @content;
+        }
+    }
+	 @elseif $size==tablet {
+        @media screen and (min-width: $tablet) and (max-width: $laptop - 1px){
+            @content;
+        }
+    }
+	 @elseif $size==mobile {
+        @media screen and (max-width: $tablet){
+            @content;
+        }
+    }
+}
+
+
+@mixin ph {
+    &::-webkit-input-placeholder {
+        font-family: sans-serif;
+        @content
+    }
+    &::-moz-placeholder {
+        font-family: sans-serif;
+        @content
+    }
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+        font-family: sans-serif;
+        @content
+    }
+    &::placeholder {
+        font-family: sans-serif;
+        @content
+    }
+    &:placeholder {
+        font-family: sans-serif;
+        @content
+    }
+}

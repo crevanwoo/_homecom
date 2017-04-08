@@ -1,0 +1,7 @@
+cd /d C:\OpenServer\domains\_homecom
+
+gulp compile:pug
+
+gulp all:watch
+
+
