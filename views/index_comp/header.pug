@@ -2,12 +2,12 @@
 header
 	div.wrapper
 		div.header_logo
-			a(href="")
+			a(href="index.html#index").anchor
 				img(src="images/logo.png" alt="")
 		nav
 			ul.header_nav
 				-for(var i =0; i < 4; i++)
 					li
-						a(href= nav_links[i])= nav_titles[i]     
+						a.anchor(href= nav_links[i])= nav_titles[i]     
   
 // header ends

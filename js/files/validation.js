@@ -1,0 +1,4 @@
+$.validate({
+   
+	scrollToTopOnError: false,
+  });

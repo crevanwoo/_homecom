@@ -12,6 +12,7 @@ body {
 }
 
 .general_wrapper {
+	position: relative;
 	min-height: 100%;
 	padding-bottom: $footer_height;
 }
@@ -79,29 +80,80 @@ body {
 	font-size: 16px;
 }
 
-
-/*.slick-arrow {
+.slick-arrow {
 	position: absolute;
-	width: 55px;
-	height: 55px;
-	background-image: url(../images/next-prev.png);
+	width: 27px;
+	height: 31px;
+	background-image: url(../images/arrow.png);
+	background-color: transparent;
 	top: 50%;
-	transform: translateY(-50%);
+	margin-top: -15px;
 	font-size: 0px;
 	z-index: 1;
+	transition: $trans;
 }
 
 .slick-next {
 	right: 0;
-	background-position: 0px -55px;
+	transform: rotate(0);
+	&:hover {
+		transform: rotate(0) translateX(5px)
+	}
 }
 
 .slick-prev {
 	left: 0;
-	background-position: 0px 0px;
+	transform: rotate(180deg);
+	&:hover {
+		transform: rotate(180deg) translateX(5px)
+	}
 }
 
-.slick-dots {
+.modal_window {
+	@extend %shim;
+	opacity: 0;
+	transition-duration: $trans;
+	transition-property: opacity;
+	position: fixed;
+	top: 100vh;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	overflow: auto;
+	z-index: 100;
+	&.active {
+		opacity: 1;
+		top: 0;
+	}
+	.modal_content {
+		@extend %clear;
+		position: relative;
+		width: 700px;
+		border: 2px solid $bd_dark;
+		background-color: $bg_light;
+		color: $font-dark;
+		font-size: 20px;
+		padding: 60px 40px;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+	.close {
+		background-image: url(../images/modal_close.png);
+		width: 50px;
+		height: 50px;
+		background-size: contain;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+	}
+}
+
+
+/*.slick-dots {
 	font-size: 0;
 	li {
 		display: inline-block;
@@ -131,31 +183,7 @@ body {
 	}
 }
 
-.modal_window {
-	opacity: 0;
-	transition-duration: 0.5s;
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 100;
-	&.visible {
-		opacity: 1;
-	}
-	.close {
-		background-image: url(../images/modal_close.png);
-		width: 66px;
-		height: 66px;
-		position: absolute;
-		top: -6px;
-		right: -10px;
-		cursor: pointer;
-	}
-}
+
 
 .input {
 	position: relative;

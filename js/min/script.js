@@ -1,1 +1,1 @@
-$(".slider_flats").slick({slidesToShow:3,slidesToScroll:1,autoplay:!0,infinite:!0,dots:!1});
+$(".slider_flats").slick({slidesToShow:3,slidesToScroll:1,autoplay:!0,infinite:!0,dots:!1});var header_height=parseInt($("header").css("height"));$("body").on("click",".anchor",function(e){if(document.querySelector(".general_wrapper.index")){var r=$(this).attr("href");if(-1!=r.indexOf("#")){e.preventDefault();var t=r.indexOf("#");r=r.slice(t,r.length);var i=$(r).offset().top-header_height;$("body,html").animate({scrollTop:i},600)}}}),$.validate({scrollToTopOnError:!1});

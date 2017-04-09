@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homecom</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/slick.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="js/min/jquery-3.1.1.min.js" defer></script>
+    <script src="js/min/jquery.form-validator.min.js" defer></script>
+    <script src="js/min/slick.min.js" defer></script>
+    <script src="js/script.js" defer> </script>
+  </head>
+  <body>
+    <div class="general_wrapper anketa">
+      <!-- header begins-->
+      <header>
+        <div class="wrapper">
+          <div class="header_logo"><a class="anchor" href="index.html#index"><img src="images/logo.png" alt=""></a></div>
+          <nav>
+            <ul class="header_nav">
+              <li><a class="anchor" href="index.html#preferences">Условия</a></li>
+              <li><a class="anchor" href="anketa.html">Анкета</a></li>
+              <li><a class="anchor" href="about.html">О нас</a></li>
+              <li><a class="anchor" href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- header ends-->
+      <!-- footer begins-->
+      <footer> 
+        <div class="wrapper">
+          <div class="footer_form">
+            <h4 class="h4">Оставьте заявку и мы вам перезвоним</h4>
+            <form>
+              <div class="input name">
+                <label>Ваше имя
+                  <input class="inp_name" data-validation="length custom" data-validation-length="3-50" data-validation-error-msg="Допустимы только буквы, от 3 до 50" data-validation-regexp="^[a-zA-ZА-Яа-яЁё ]{3,}$">
+                </label>
+              </div>
+              <div class="input number">
+                <label>Номер телефона
+                  <input class="inp_number" data-validation="length number" data-validation-length="8-20" data-validation-allowing="-_)(+" data-validation-error-msg="Введите номер корректно от 8 до 20 цифр">
+                </label>
+              </div>
+              <button type="submit">Отправить заявку</button>
+            </form>
+          </div>
+          <div class="footer_contacts"><h6 class="h6">Контакты</h6> 
+            <p>улица такая-то</p><a href="tel:">+38 111 111 11 11</a><a href="mailto:">email@email</a>
+          </div>
+          <nav class="footer_nav">
+            <ul>
+              <li><a href="index.html#preferences">Условия</a></li>
+              <li><a href="anketa.html">Анкета</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="additional_info">2017 разработано, политика и т.д.</div>
+        </div>
+        <!--modals begins-->
+        <!--modal_confirm begins-->
+        <div class="modal_window modal_confirm">
+          <div class="modal_content">
+            <div class="close">  </div>
+            <p class="text_b">Ваша заявка отправлена. Скоро наши менеджеры свяжутся с вами</p>
+          </div>
+        </div>
+        <!--modal_confirm ends-->
+        <!--modal_error begins-->
+        <div class="modal_window modal_error">
+          <div class="modal_content">
+            <div class="close">       </div>
+            <p class="text_b">Ваша заявка не была отправлена. Попробуйте еще раз.</p>
+          </div>
+        </div>
+        <!--modal_error ends-->
+        <!--modals ends-->
+      </footer>
+      <!-- footer ends-->
+    </div>
+  </body>
+</html>

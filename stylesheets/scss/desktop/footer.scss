@@ -1,0 +1,108 @@
+footer {
+	@extend %shim;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: $font_light;
+	height: $footer_height;
+	padding: 20px 0;
+	background-image: url(../images/footer.jpg);
+	background-attachment: fixed;
+	background-position: center top;
+	.wrapper {
+		position: relative;
+		@extend %clear;
+	}
+	.footer_form {
+		float: left;
+		width: 60%;
+		.h4 {
+			margin-bottom: 20px;
+		}
+		form {
+			@extend %clear;
+			input,
+			button {
+				border: 1px solid $bd_light;
+				background-color: $bg_dark;
+				color: $font_light;
+				transition: $trans;
+				height: 40px;
+			}
+		}
+		.input {
+			width: 50%;
+			float: left;
+			padding-right: 20px;
+			margin-bottom: 40px;
+			input {
+				margin-top: 10px;
+				display: block;
+				padding: 0 20px;
+				width: 100%;
+				font-size: 18px;
+				&:focus {
+					background-color: $bg_light;
+					color: $font-dark;
+				}
+				&.error {
+					position: relative;
+					text-decoration: underline;
+					border-color: $bd_error;
+					&+span {
+						position: absolute;
+						margin-top: 10px;
+						padding: 5px;
+						font-size: 10px;
+						text-transform: uppercase;
+						color: $font_error;
+						background-color: $bg_light;
+						border: 1px solid $bd_error;
+					}
+				}
+			}
+		}
+		button {
+			text-align: center;
+			display: block;
+			text-transform: uppercase;
+			float: left;
+			padding: 0 30px;
+			font-family: Medium;
+			&:hover,
+			&:active {
+				background-color: $bg_light;
+				color: $font-dark;
+			}
+		}
+	}
+	.footer_contacts,
+	.footer_nav {
+		padding: 0 20px;
+		float: left;
+		width: 20%;
+		line-height: 150%;
+		text-align: right;
+	}
+	$text-top_offset: 40px;
+	.footer_contacts {
+		h6 {
+			height: $text-top_offset;
+		}
+		a {
+			display: block;
+		}
+	}
+	.footer_nav {
+		padding-top: $text-top_offset;
+		cursor: pointer;
+	}
+	.additional_info {
+		text-align: right;
+		clear: both;
+		padding-top: 30px;
+		font-size: 12px;
+		font-family: Light;
+	}
+}

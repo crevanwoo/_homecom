@@ -3,17 +3,25 @@
 footer 
 	div.wrapper
 		div.footer_form
+			h4.h4 Оставьте заявку и мы вам перезвоним
 			form
 				div.input.name
-					input.inp_name
+					label Ваше имя
+						input.inp_name(data-validation="length custom" data-validation-length="3-50"  data-validation-error-msg="Допустимы только буквы, от 3 до 50" data-validation-regexp="^[a-zA-ZА-Яа-яЁё ]{3,}$")
 				div.input.number
-					input.inp_number
-				button(type="submit")
-		div.footer_contacts
+					label Номер телефона
+						input.inp_number(data-validation="length number" data-validation-length="8-20"  data-validation-allowing="-_)(+"  data-validation-error-msg="Введите номер корректно от 8 до 20 цифр")
+				button(type="submit") Отправить заявку
+		div.footer_contacts <h6 class="h6">Контакты</h6> 
+			p улица такая-то
+			a(href="tel:") +38 111 111 11 11
+			a(href="mailto:") email@email
 		nav.footer_nav
 			ul
-				li
-					a(href="")
+				-for(var i =0; i < 4; i++)
+					li
+						a(href= nav_links[i])= nav_titles[i]  
+		div.additional_info 2017 разработано, политика и т.д.
 	include modals
 	
 // footer ends

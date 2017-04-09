@@ -1,11 +1,3 @@
-$('.slider_flats').slick({
-	slidesToShow: 3,
-	slidesToScroll: 1,
-	autoplay: true,
-	infinite: true,
-	dots: false,
-});
-
 	var header_height = parseInt($('header').css('height'));
 
 	$("body").on("click", ".anchor", function (event) {
@@ -31,8 +23,3 @@ $('.slider_flats').slick({
 			}
 		}
 	});
-
-$.validate({
-   
-	scrollToTopOnError: false,
-  });

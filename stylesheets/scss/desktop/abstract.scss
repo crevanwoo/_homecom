@@ -25,17 +25,20 @@ $c_brown: rgba(46, 23, 6, 1);
 //font
 $font_light: $c_cream;
 $font_dark: $c_brown;
+$font_error: darkred;
 //bg
 $bg_light: $c_cream;
 $bg_dark: $c_brown;
+
 //border
+$bd_error: darkred;
 $bd_light: $c_cream;
 $bd_dark: $c_brown;
 
 /*Elem sizes */
 
 $header_height: 70px;
-$footer_height: 100px;
+$footer_height: 300px;
 $input_padding: 20px;
 
 /*Breakpoints*/

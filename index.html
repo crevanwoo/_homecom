@@ -9,21 +9,22 @@
     <link rel="stylesheet" href="stylesheets/slick.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="js/min/jquery-3.1.1.min.js" defer></script>
+    <script src="js/min/jquery.form-validator.min.js" defer></script>
     <script src="js/min/slick.min.js" defer></script>
     <script src="js/script.js" defer> </script>
   </head>
   <body>
-    <div class="general_wrapper">
+    <div class="general_wrapper index">
       <!-- header begins-->
       <header>
         <div class="wrapper">
-          <div class="header_logo"><a href=""><img src="images/logo.png" alt=""></a></div>
+          <div class="header_logo"><a class="anchor" href="index.html#index"><img src="images/logo.png" alt=""></a></div>
           <nav>
             <ul class="header_nav">
-              <li><a>Условия</a></li>
-              <li><a>Анкета</a></li>
-              <li><a>О нас</a></li>
-              <li><a>Контакты</a></li>
+              <li><a class="anchor" href="index.html#preferences">Условия</a></li>
+              <li><a class="anchor" href="anketa.html">Анкета</a></li>
+              <li><a class="anchor" href="about.html">О нас</a></li>
+              <li><a class="anchor" href="contacts.html">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -31,23 +32,22 @@
       <!-- header ends-->
       <!--content begins-->
       <!--jumbotron begins-->
-      <div class="jumbotron">
+      <div class="jumbotron" id="index">
         <div class="bg"></div>
         <div class="wrapper">
           <h1 class="h1 main_title">Снять квартиру?</h1>
-          <p class="comment text_b">С нами это просто!</p>
-          <div class="bttn">Наши предложения</div>
+          <p class="comment text_b">С нами это просто!</p><a class="anchor bttn" href="#categories">Наши предложения</a>
         </div>
       </div>
       <!--jumbotron ends-->
       <!--categories begins-->
-      <div class="categories">
+      <div class="categories" id="categories">
         <div class="wrapper">
-          <!--single category link begins--><a href="">
+          <!--single category link begins--><a href="category.html">
             <h3 class="h3">Снять посуточно</h3><span class="text_m">если вы приехали в город ненадолго или же просто хотите сменить обстановку</span>
             <!-- поставить ограничение по символам, чтобы влазили в 2 строчки--></a>
           <!--single category link ends-->
-          <!--single category link begins--><a href="">
+          <!--single category link begins--><a href="category.html">
             <h3 class="h3">Снять помесячно</h3><span class="text_m">если вам нужно жилье в долгосрочной перспективе</span>
             <!-- поставить ограничение по символам, чтобы влазили в 2 строчки--></a>
           <!--single category link ends-->
@@ -55,7 +55,7 @@
       </div>
       <!--categories ends-->
       <!-- preferences begins-->
-      <section class="preferences">
+      <section class="preferences" id="preferences">
         <div class="wrapper">
           <h2 class="h2 section_title">Преимущества работы с нами</h2>
           <ul>
@@ -74,24 +74,24 @@
         <div class="wrapper">
           <div class="slider_flats">
             <!--single slide begins-->
-            <div class="single_flat"><img src="" alt=""><a href>
-                <h5 class="h5 slider_title">Квартира 3000 грн</h5><span>адрес, подробности</span></a></div>
+            <div class="single_flat"><img src="images/slide.jpg" alt=""><a href>
+                <h5 class="h5 slider_title">Квартира 3000 грн Lorem ipsum</h5><span>адрес, подробности</span></a></div>
             <!--single slide ends-->
             <!--single slide begins-->
-            <div class="single_flat"><img src="" alt=""><a href>
-                <h5 class="h5 slider_title">Квартира 3000 грн</h5><span>адрес, подробности</span></a></div>
+            <div class="single_flat"><img src="images/slide.jpg" alt=""><a href>
+                <h5 class="h5 slider_title">Квартира 3000 грн Lorem ipsum</h5><span>адрес, подробности</span></a></div>
             <!--single slide ends-->
             <!--single slide begins-->
-            <div class="single_flat"><img src="" alt=""><a href>
-                <h5 class="h5 slider_title">Квартира 3000 грн</h5><span>адрес, подробности</span></a></div>
+            <div class="single_flat"><img src="images/slide.jpg" alt=""><a href>
+                <h5 class="h5 slider_title">Квартира 3000 грн Lorem ipsum</h5><span>адрес, подробности</span></a></div>
             <!--single slide ends-->
             <!--single slide begins-->
-            <div class="single_flat"><img src="" alt=""><a href>
-                <h5 class="h5 slider_title">Квартира 3000 грн</h5><span>адрес, подробности</span></a></div>
+            <div class="single_flat"><img src="images/slide.jpg" alt=""><a href>
+                <h5 class="h5 slider_title">Квартира 3000 грн Lorem ipsum</h5><span>адрес, подробности</span></a></div>
             <!--single slide ends-->
             <!--single slide begins-->
-            <div class="single_flat"><img src="" alt=""><a href>
-                <h5 class="h5 slider_title">Квартира 3000 грн</h5><span>адрес, подробности</span></a></div>
+            <div class="single_flat"><img src="images/slide.jpg" alt=""><a href>
+                <h5 class="h5 slider_title">Квартира 3000 грн Lorem ipsum</h5><span>адрес, подробности</span></a></div>
             <!--single slide ends-->
           </div>
         </div>
@@ -102,22 +102,33 @@
       <footer> 
         <div class="wrapper">
           <div class="footer_form">
+            <h4 class="h4">Оставьте заявку и мы вам перезвоним</h4>
             <form>
               <div class="input name">
-                <input class="inp_name">
+                <label>Ваше имя
+                  <input class="inp_name" data-validation="length custom" data-validation-length="3-50" data-validation-error-msg="Допустимы только буквы, от 3 до 50" data-validation-regexp="^[a-zA-ZА-Яа-яЁё ]{3,}$">
+                </label>
               </div>
               <div class="input number">
-                <input class="inp_number">
+                <label>Номер телефона
+                  <input class="inp_number" data-validation="length number" data-validation-length="8-20" data-validation-allowing="-_)(+" data-validation-error-msg="Введите номер корректно от 8 до 20 цифр">
+                </label>
               </div>
-              <button type="submit"></button>
+              <button type="submit">Отправить заявку</button>
             </form>
           </div>
-          <div class="footer_contacts"></div>
+          <div class="footer_contacts"><h6 class="h6">Контакты</h6> 
+            <p>улица такая-то</p><a href="tel:">+38 111 111 11 11</a><a href="mailto:">email@email</a>
+          </div>
           <nav class="footer_nav">
             <ul>
-              <li><a href=""></a></li>
+              <li><a href="index.html#preferences">Условия</a></li>
+              <li><a href="anketa.html">Анкета</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
             </ul>
           </nav>
+          <div class="additional_info">2017 разработано, политика и т.д.</div>
         </div>
         <!--modals begins-->
         <!--modal_confirm begins-->
