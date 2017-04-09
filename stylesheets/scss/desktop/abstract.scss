@@ -134,3 +134,27 @@ $tablet: 500px;
 		}
 	}
 }
+
+@mixin hover_underline_min($bottom_offset, $background, $height, $width) {
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 0;
+		height: $height;
+		left: 50%;
+		bottom: $bottom_offset;
+		transition: $trans;
+		background-color: $background;
+		margin-left: 0;
+	
+	}
+	&:hover {
+		&:after {
+			margin-left: -$width/2;
+			width: $width;
+		}
+	}
+}
+

@@ -1,0 +1,59 @@
+//category begins
+section.category_results
+	div.wrapper.results_content
+		h2.h2.category_title Квартиры посуточно
+		div.panel
+			nav.pagination
+				+navigation(2, 8)
+		div.results_wrapper
+			-for(var j =0; j< 10; j++)
+				//single result begins
+				div.single_result
+					div.img
+						img(src="images/category_pict.jpg" alt="")
+					div.description
+						h5.h5 Lorem ipsum dolor
+						p.text_s= lorem100 
+						ul.keys
+							-for(var k =0; k< 3; k++)
+								li= result_icon_text[k]
+									span(class="fa " + result_icon_class[k])
+						div.bttn Подробнее 
+				//single result ends
+	div.bottom_panel
+		div.wrapper
+			div.panel
+				nav.pagination
+					+navigation(2, 8)
+	//modal begins			
+	div.modal_window.modal_overview
+		div.modal_content
+			div.close 
+			div.gallery
+				div.modal_big_slider
+					-for(var k =0; k< 10; k++)
+						//single slide begins
+						div.single_slide
+							img
+						//single slide ends
+				div.modal_nav_slider
+					-for(var k =0; k< 10; k++)
+						//single slide begins
+						div.single_slide
+							img
+						//single slide ends
+				div.modal_description
+					h5.h5
+					p.text_m
+					ul.keys
+						-for(var k =0; k< 3; k++)
+							li Lorem ipsum
+					h6.additional_info
+					ul.parameters
+						-for(var k =0; k< 10; k++)
+							li Lorem ipsum
+					p.comment
+					div.bttn Заказать				
+	//modal ends
+
+//category ends

@@ -1,10 +1,10 @@
-mixin profile_menu(active_num)
-    ul.profile_menu
-            -for (var i = 0; i< 6; i++)
+mixin navigation(active_num, length)
+    ul
+            -for (var i = 0; i< length; i++)
                 if (i == active_num)
                     li.active 
-                        a(href= profile_menu_link[i])= profile_menu_title[i]
+                        a(href= pag_link[i])= pag_text[i]
                 else 
                     li
-                        a(href= profile_menu_link[i])= profile_menu_title[i]
+                        a(href= pag_link[i])= pag_text[i]
 
