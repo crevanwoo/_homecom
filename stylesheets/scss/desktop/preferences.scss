@@ -1,8 +1,8 @@
-.preferences {font-size: 0;
+.preferences {
+	font-size: 0;
 	text-align: center;
-	
 	.h2 {
-		@include hover_underline(-15px, $bg_dark, 3px);
+		@include hover_underline_min(-15px, $bg_dark, 2px, 200px);
 		text-align: center;
 		display: inline-block;
 		padding: 0 20px;
