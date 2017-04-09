@@ -7,6 +7,8 @@ body {
 	height: 100%;
 	font-family: Regular;
 	font-size: 16px;
+	color: $font_dark;
+	background-color: $bg_light;
 }
 
 .general_wrapper {
@@ -15,12 +17,30 @@ body {
 }
 
 .wrapper {
+	padding: 0 20px;
 	width: 1200px;
 	margin: auto;
 }
 
 .bttn {
 	cursor: pointer;
+	border-width: 2px;
+	border-style: solid;
+	line-height: 36px;
+	height: 40px;
+	text-transform: uppercase;
+	text-align: center;
+	transition: $trans;
+	font-size: 16px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: Medium;
 }
 
 .h1 {
@@ -46,6 +66,19 @@ body {
 .h6 {
 	font-size: 20px;
 }
+
+.text_b {
+	font-size: 25px;
+}
+
+.text_m {
+	font-size: 20px;
+}
+
+.text_s {
+	font-size: 16px;
+}
+
 
 /*.slick-arrow {
 	position: absolute;

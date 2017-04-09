@@ -1,0 +1,1 @@
+$(".slider_flats").slick({slidesToShow:3,slidesToScroll:1,autoplay:!0,infinite:!0,dots:!1});

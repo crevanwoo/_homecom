@@ -1,0 +1,40 @@
+.jumbotron {
+	position: relative;
+	height: 100vh;
+	.bg {
+		@extend %shim;
+		position: absolute;
+		top: $header_height;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url(../images/jumbotron.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	.wrapper {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		color: $bg_light;
+		left: 0;
+		right: 0;
+		text-align: center;
+		font-size: 0;
+		.h1 {
+			text-transform: uppercase;
+			line-height: 170%;
+		}
+		.bttn {
+			margin-top: 40px;
+			display: inline-block;
+			border-color: $bd_light;
+			padding: 0 20px;
+			&:hover {
+				background-color: $bg_light;
+				color: $font_dark;
+				border-color: $bd_dark;
+			}
+		}
+	}
+}

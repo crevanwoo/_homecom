@@ -20,6 +20,22 @@ git https://github.com/crevanwoo
 
 /*Elem sizes */
 /*Breakpoints*/
+header .wrapper, .categories .wrapper, .preferences ul {
+  position: relative; }
+  header .wrapper:after, .categories .wrapper:after, .preferences ul:after {
+    content: '';
+    display: block;
+    clear: both; }
+
+.jumbotron .bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(46, 23, 6, 0.55); }
+
 html,
 body {
   margin: 0;
@@ -75,18 +91,38 @@ html {
 body {
   height: 100%;
   font-family: Regular;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #2e1706;
+  background-color: ivory; }
 
 .general_wrapper {
   min-height: 100%;
   padding-bottom: 100px; }
 
 .wrapper {
+  padding: 0 20px;
   width: 1200px;
   margin: auto; }
 
 .bttn {
-  cursor: pointer; }
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  line-height: 36px;
+  height: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 16px; }
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: Medium; }
 
 .h1 {
   font-size: 45px; }
@@ -105,6 +141,15 @@ body {
 
 .h6 {
   font-size: 20px; }
+
+.text_b {
+  font-size: 25px; }
+
+.text_m {
+  font-size: 20px; }
+
+.text_s {
+  font-size: 16px; }
 
 /*.slick-arrow {
 	position: absolute;
@@ -198,3 +243,159 @@ body {
 		background-size: 100% 100%;
 	}
 }*/
+header {
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: ivory;
+  z-index: 1; }
+  header .wrapper .header_logo {
+    float: left;
+    height: 70px;
+    padding: 10px 0;
+    cursor: pointer; }
+    header .wrapper .header_logo a {
+      display: block;
+      height: 100%; }
+    header .wrapper .header_logo img {
+      height: 100%;
+      width: auto; }
+  header .wrapper nav {
+    float: right; }
+    header .wrapper nav .header_nav {
+      font-size: 0;
+      text-transform: uppercase;
+      margin-right: -10px; }
+      header .wrapper nav .header_nav li {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 70px;
+        cursor: pointer;
+        padding: 0 10px;
+        position: relative; }
+        header .wrapper nav .header_nav li:after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 2px;
+          left: 50%;
+          bottom: 15px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          background-color: #2e1706; }
+        header .wrapper nav .header_nav li:hover:after {
+          left: 0;
+          width: 100%; }
+
+.jumbotron {
+  position: relative;
+  height: 100vh; }
+  .jumbotron .bg {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/jumbotron.jpg);
+    background-size: cover;
+    background-attachment: fixed; }
+  .jumbotron .wrapper {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    color: ivory;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0; }
+    .jumbotron .wrapper .h1 {
+      text-transform: uppercase;
+      line-height: 170%; }
+    .jumbotron .wrapper .bttn {
+      margin-top: 40px;
+      display: inline-block;
+      border-color: ivory;
+      padding: 0 20px; }
+      .jumbotron .wrapper .bttn:hover {
+        background-color: ivory;
+        color: #2e1706;
+        border-color: #2e1706; }
+
+.categories .wrapper {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .categories .wrapper a {
+    display: block;
+    width: 50%;
+    height: 130px;
+    padding: 20px;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    position: relative; }
+    .categories .wrapper a:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: ivory;
+      opacity: 1;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+    .categories .wrapper a:hover:before {
+      opacity: 0.7; }
+    .categories .wrapper a .h3 {
+      position: relative;
+      margin-bottom: 10px; }
+    .categories .wrapper a span {
+      position: relative; }
+    .categories .wrapper a:nth-of-type(1) {
+      background-image: url(../images/cat_1.jpg); }
+    .categories .wrapper a:nth-of-type(2) {
+      background-image: url(../images/cat_2.jpg); }
+
+.preferences {
+  font-size: 0;
+  text-align: center; }
+  .preferences .h2 {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    padding: 0 20px;
+    margin-bottom: 60px; }
+    .preferences .h2:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 3px;
+      left: 50%;
+      bottom: -15px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      background-color: #2e1706; }
+    .preferences .h2:hover:after {
+      left: 0;
+      width: 100%; }
+  .preferences ul {
+    text-align: left; }
+    .preferences ul li {
+      position: relative;
+      padding-left: 40px;
+      padding-right: 20px;
+      font-size: 20px;
+      padding-bottom: 20px;
+      float: left;
+      width: 50%; }
+      .preferences ul li span.fa {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        font-size: 20px;
+        color: #2e1706; }
