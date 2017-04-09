@@ -9,7 +9,8 @@ footer {
 	padding: 20px 0;
 	background-image: url(../images/footer.jpg);
 	background-attachment: fixed;
-	background-position: center top;
+	//background-position: center top;
+	background-position: center center;
 	.wrapper {
 		position: relative;
 		@extend %clear;

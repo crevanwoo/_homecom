@@ -1,0 +1,61 @@
+section.anketa {$input_width: 538px;
+	padding-top: $header_height + 40px;
+	padding-bottom: 40px;
+	.wrapper {@extend %shim;
+		position: relative;
+		background-image: url(../images/slide.jpg);
+		background-attachment: fixed;
+		background-size: cover;
+		padding-top: 40px;
+		color: $font-light;
+		border: 2px solid $bd_dark;
+		.h2 {position: relative;
+		text-align: center;
+		margin-bottom: 40px;}
+		form {
+			position: relative;
+			@extend %clear;
+			
+			label {float: left;
+	
+			display: block;
+				margin: 20px 20px;
+			}
+			input {display: block;
+				height: 40px;
+				border: 1px solid $bd_dark;
+				margin-top: 20px;				
+				padding-left: 20px;
+				font-family: Regular;
+				background-color: $bg_light;
+				width: $input_width;
+			}
+			textarea {float: left;
+				padding-left: 20px;
+				padding-top: 20px;
+				background-color: $bg_light;
+				height: 200px;
+				border: 1px solid $bd_dark;
+				width: $input_width;
+				margin-top: 40px;
+				margin-bottom: 40px;
+				margin-left: 20px;
+				margin-right: 20px;
+				font-family: Regular;
+			}
+			button {float: left;
+				width: 300px;
+				height: 40px;
+				margin-top: 40px;
+				margin-left: 20px;
+				position: relative;
+				border: 1px solid $bd_dark;
+				top: 80px;
+				left: 96px;
+				background-color: $bg_light;
+				text-transform: uppercase;
+				color: $font_dark;
+			}
+		}
+	}
+}

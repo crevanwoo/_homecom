@@ -20,14 +20,14 @@ git https://github.com/crevanwoo
 
 /*Elem sizes */
 /*Breakpoints*/
-.modal_window .modal_content, header .wrapper, .categories .wrapper, .preferences ul, footer .wrapper, footer .footer_form form, .category_results .results_content .single_result {
+.modal_window .modal_content, header .wrapper, .categories .wrapper, .preferences ul, footer .wrapper, footer .footer_form form, .category_results .results_content .single_result, section.anketa .wrapper form {
   position: relative; }
-  .modal_window .modal_content:after, header .wrapper:after, .categories .wrapper:after, .preferences ul:after, footer .wrapper:after, footer .footer_form form:after, .category_results .results_content .single_result:after {
+  .modal_window .modal_content:after, header .wrapper:after, .categories .wrapper:after, .preferences ul:after, footer .wrapper:after, footer .footer_form form:after, .category_results .results_content .single_result:after, section.anketa .wrapper form:after {
     content: '';
     display: block;
     clear: both; }
 
-.modal_window:before, .jumbotron .bg:before, footer:before, .category_results:before {
+.modal_window:before, .jumbotron .bg:before, footer:before, .category_results:before, section.anketa .wrapper:before {
   content: '';
   position: absolute;
   top: 0;
@@ -316,6 +316,7 @@ header {
     bottom: 0;
     background-image: url(../images/jumbotron.jpg);
     background-size: cover;
+    background-position: center center;
     background-attachment: fixed; }
   .jumbotron .wrapper {
     position: absolute;
@@ -472,7 +473,7 @@ footer {
   padding: 20px 0;
   background-image: url(../images/footer.jpg);
   background-attachment: fixed;
-  background-position: center top; }
+  background-position: center center; }
   footer .wrapper {
     position: relative; }
   footer .footer_form {
@@ -690,3 +691,60 @@ footer {
           color: ivory; }
         .category_results .panel .pagination ul li.active {
           border: 1px solid #2e1706; }
+
+section.anketa {
+  padding-top: 110px;
+  padding-bottom: 40px; }
+  section.anketa .wrapper {
+    position: relative;
+    background-image: url(../images/slide.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 40px;
+    color: ivory;
+    border: 2px solid #2e1706; }
+    section.anketa .wrapper .h2 {
+      position: relative;
+      text-align: center;
+      margin-bottom: 40px; }
+    section.anketa .wrapper form {
+      position: relative; }
+      section.anketa .wrapper form label {
+        float: left;
+        display: block;
+        margin: 20px 20px; }
+      section.anketa .wrapper form input {
+        display: block;
+        height: 40px;
+        border: 1px solid #2e1706;
+        margin-top: 20px;
+        padding-left: 20px;
+        font-family: Regular;
+        background-color: ivory;
+        width: 538px; }
+      section.anketa .wrapper form textarea {
+        float: left;
+        padding-left: 20px;
+        padding-top: 20px;
+        background-color: ivory;
+        height: 200px;
+        border: 1px solid #2e1706;
+        width: 538px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-family: Regular; }
+      section.anketa .wrapper form button {
+        float: left;
+        width: 300px;
+        height: 40px;
+        margin-top: 40px;
+        margin-left: 20px;
+        position: relative;
+        border: 1px solid #2e1706;
+        top: 80px;
+        left: 96px;
+        background-color: ivory;
+        text-transform: uppercase;
+        color: #2e1706; }
