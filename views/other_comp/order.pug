@@ -1,0 +1,14 @@
+section.order
+	div.wrapper
+		h2.h2 Договор
+		form
+			-for(var i=0; i< 5; i++)
+				label.cell Заголовок поля
+					input
+				p.title.text_s.cell= lorem100
+			label Заголовок поля
+				textarea
+			p.text_s.big_title= lorem100
+			button(type="submit") Отправить
+			
+			

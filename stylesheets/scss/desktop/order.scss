@@ -1,0 +1,138 @@
+section.order {
+	position: relative;
+	@extend %shim;
+	$input_width: 538px;
+	$field_height: 80px;
+	$margin_vert: 10px;
+	padding-top: $header_height + 40px;
+	padding-bottom: 40px;
+	background-image: url(../images/slide.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 150px;
+		background-color: $bg_light;
+	}
+	.wrapper {
+		z-index: 1;
+		//@extend %shim;
+		position: relative;
+		background-color: $bg_light;
+		padding-top: 40px;
+		color: $bg_dark;
+		border: 2px solid;
+		.h2 {
+			position: relative;
+			text-align: center;
+			margin-bottom: 40px;
+			@include hover_underline_min(-15px, $bg_dark, 2px, 200px);
+		}
+		form {
+			position: relative;
+			@extend %clear;
+			.cell {
+				height: 100px;
+				margin-bottom: $margin_vert;
+			}
+			.title {
+				position: relative;
+				float: left;
+				width: 40%;
+				margin-left: 10%;
+				height: 100px;
+				overflow-y: auto;
+				overflow-x: hidden;
+				padding: 10px 20px;
+				border: 1px solid $bd_dark;
+				margin-bottom: $margin_vert;
+				font-family: Light;
+			}
+			label {
+				width: 50%;
+				float: left;
+				display: block;
+				font-family: Medium;
+				line-height: 60px;
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					width: 27px;
+					height: 31px;
+					background-image: url(../images/arrow.png);
+					background-color: transparent;
+					top: 50%;
+					right: -10%;
+					margin-right: -14px;
+					margin-top: -15px;
+					font-size: 0px;
+					transform: translateX(0);
+					transition: $trans;
+				}
+				&:hover {
+					&:before {
+						transform: translateX(5px)
+					}
+				}
+			}
+			input {
+				font-size: 18px;
+				display: block;
+				height: 40px;
+				border: 1px solid $bd_dark;
+				padding-left: 20px;
+				font-family: Regular;
+				background-color: $bg_light;
+				width: 100%
+			}
+			textarea {
+				font-size: 18px;
+				padding-left: 20px;
+				padding-top: 20px;
+				background-color: $bg_light;
+				height: 200px;
+				border: 1px solid $bd_dark;
+				width: 100%;
+				font-family: Regular;
+			}
+			.big_title {
+				position: relative;
+				float: left;
+				width: 40%;
+				margin-left: 10%;
+				margin-top: 60px;
+				height: 200px;
+				overflow-y: auto;
+				overflow-x: hidden;
+				padding: 10px 20px;
+				border: 1px solid $bd_dark;
+				font-family: Light;
+				margin-bottom: 40px;
+			}
+			button {
+				clear: both;
+				width: 300px;
+				height: 40px;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				margin-bottom: 40px;
+				margin-top: 40px;
+				border: 1px solid $bd_dark;
+				background-color: $bg_light;
+				text-transform: uppercase;
+				color: $font_dark;
+				transition: $trans;
+				&:hover {
+					background-color: $bg_dark;
+					color: $font_light
+				}
+			}
+		}
+	}
+}

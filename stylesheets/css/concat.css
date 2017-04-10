@@ -20,14 +20,14 @@ git https://github.com/crevanwoo
 
 /*Elem sizes */
 /*Breakpoints*/
-.modal_window .modal_content, header .wrapper, .categories .wrapper, .preferences ul, footer .wrapper, footer .footer_form form, .category_results .results_content .single_result, section.anketa .wrapper form, section.contacts .wrapper .contacts_items {
+.modal_window .modal_content, header .wrapper, .categories .wrapper, .preferences ul, footer .wrapper, footer .footer_form form, .category_results .results_content .single_result, section.anketa .wrapper form, section.contacts .wrapper .contacts_items, section.order .wrapper form {
   position: relative; }
-  .modal_window .modal_content:after, header .wrapper:after, .categories .wrapper:after, .preferences ul:after, footer .wrapper:after, footer .footer_form form:after, .category_results .results_content .single_result:after, section.anketa .wrapper form:after, section.contacts .wrapper .contacts_items:after {
+  .modal_window .modal_content:after, header .wrapper:after, .categories .wrapper:after, .preferences ul:after, footer .wrapper:after, footer .footer_form form:after, .category_results .results_content .single_result:after, section.anketa .wrapper form:after, section.contacts .wrapper .contacts_items:after, section.order .wrapper form:after {
     content: '';
     display: block;
     clear: both; }
 
-.modal_window:before, .jumbotron .bg:before, footer:before, .category_results:before, section.anketa .wrapper:before, section.about:before {
+.modal_window:before, .jumbotron .bg:before, footer:before, .category_results:before, section.anketa .wrapper:before, section.about:before, section.contacts:before, section.order:before {
   content: '';
   position: absolute;
   top: 0;
@@ -266,7 +266,7 @@ header {
   left: 0;
   right: 0;
   background-color: ivory;
-  z-index: 1; }
+  z-index: 10; }
   header .wrapper .header_logo {
     float: left;
     height: 70px;
@@ -812,11 +812,25 @@ section.about {
     text-indent: 30px; }
 
 section.contacts {
+  position: relative;
   padding-top: 130px;
-  padding-bottom: 60px; }
+  padding-bottom: 60px;
+  background-image: url(../images/slide.jpg);
+  background-attachment: fixed;
+  background-size: cover; }
+  section.contacts:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background-color: ivory; }
   section.contacts .wrapper {
+    position: relative;
     border: 2px solid #2e1706;
-    padding-top: 40px; }
+    padding-top: 40px;
+    background-color: ivory; }
     section.contacts .wrapper .h2 {
       text-align: center;
       position: relative; }
@@ -857,8 +871,140 @@ section.contacts {
           top: 0;
           right: 0; }
   section.contacts .map_wrapper {
+    position: relative;
+    z-index: 1;
     margin-top: 60px;
     padding: 0; }
   section.contacts #map {
     width: 100%;
     height: 600px; }
+
+section.order {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 40px;
+  background-image: url(../images/slide.jpg);
+  background-attachment: fixed;
+  background-size: cover; }
+  section.order:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background-color: ivory; }
+  section.order .wrapper {
+    z-index: 1;
+    position: relative;
+    background-color: ivory;
+    padding-top: 40px;
+    color: #2e1706;
+    border: 2px solid; }
+    section.order .wrapper .h2 {
+      position: relative;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative; }
+      section.order .wrapper .h2:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 2px;
+        left: 50%;
+        bottom: -15px;
+        transition: 0.3s;
+        background-color: #2e1706;
+        margin-left: 0; }
+      section.order .wrapper .h2:hover:after {
+        margin-left: -100px;
+        width: 200px; }
+    section.order .wrapper form {
+      position: relative; }
+      section.order .wrapper form .cell {
+        height: 100px;
+        margin-bottom: 10px; }
+      section.order .wrapper form .title {
+        position: relative;
+        float: left;
+        width: 40%;
+        margin-left: 10%;
+        height: 100px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 10px 20px;
+        border: 1px solid #2e1706;
+        margin-bottom: 10px;
+        font-family: Light; }
+      section.order .wrapper form label {
+        width: 50%;
+        float: left;
+        display: block;
+        font-family: Medium;
+        line-height: 60px;
+        position: relative; }
+        section.order .wrapper form label:before {
+          content: '';
+          position: absolute;
+          width: 27px;
+          height: 31px;
+          background-image: url(../images/arrow.png);
+          background-color: transparent;
+          top: 50%;
+          right: -10%;
+          margin-right: -14px;
+          margin-top: -15px;
+          font-size: 0px;
+          transform: translateX(0);
+          transition: 0.3s; }
+        section.order .wrapper form label:hover:before {
+          transform: translateX(5px); }
+      section.order .wrapper form input {
+        font-size: 18px;
+        display: block;
+        height: 40px;
+        border: 1px solid #2e1706;
+        padding-left: 20px;
+        font-family: Regular;
+        background-color: ivory;
+        width: 100%; }
+      section.order .wrapper form textarea {
+        font-size: 18px;
+        padding-left: 20px;
+        padding-top: 20px;
+        background-color: ivory;
+        height: 200px;
+        border: 1px solid #2e1706;
+        width: 100%;
+        font-family: Regular; }
+      section.order .wrapper form .big_title {
+        position: relative;
+        float: left;
+        width: 40%;
+        margin-left: 10%;
+        margin-top: 60px;
+        height: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 10px 20px;
+        border: 1px solid #2e1706;
+        font-family: Light;
+        margin-bottom: 40px; }
+      section.order .wrapper form button {
+        clear: both;
+        width: 300px;
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        border: 1px solid #2e1706;
+        background-color: ivory;
+        text-transform: uppercase;
+        color: #2e1706;
+        transition: 0.3s; }
+        section.order .wrapper form button:hover {
+          background-color: #2e1706;
+          color: ivory; }

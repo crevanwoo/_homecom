@@ -22,17 +22,20 @@ $dark_shim: rgba(46, 23, 6, 0.55);
 $trans: 0.3s;
 $c_cream: rgba(255, 255, 240, 1);
 $c_brown: rgba(46, 23, 6, 1);
+$c_red:#8b0000;
 //font
 $font_light: $c_cream;
 $font_dark: $c_brown;
-$font_error: #8b0000;
+$font_error: $c_red;
 //bg
 $bg_light: $c_cream;
 $bg_dark: $c_brown;
+
 //border
-$bd_error:#8b0000;
+$bd_error:$c_red;
 $bd_light: $c_cream;
 $bd_dark: $c_brown;
+$bd_extra: $c_red;
 
 /*Elem sizes */
 
