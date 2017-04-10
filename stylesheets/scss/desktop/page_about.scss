@@ -1,0 +1,37 @@
+section.about {
+	position: relative;
+	@extend %shim;
+	padding-top: $header_height + 60px;
+	background-image: url(../images/footer.jpg);
+	background-attachment: fixed;
+	background-position: center bottom;
+	background-size: auto 100%;
+	
+	line-height: 150%;
+	.top_part {
+		position: relative;
+		background-color: $bg_light;
+		border: 2px solid $bd_dark;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		margin-bottom: 20px;
+		padding-left: 100px;
+		padding-right: 100px;
+		.h2 {
+			margin-bottom: 60px;
+			text-align: center;
+			@include hover_underline_min(-15px, $bg_dark, 2px, 200px);
+		}
+		.text_m {text-indent: 30px;
+			margin-bottom: 20px;
+		}
+	}
+	.bottom_part {
+		padding: 40px 0;
+		position: relative;
+		background-color: $bg_dark;
+		color: $font-light;
+		text-indent: 30px;
+		.wrapper {}
+	}
+}

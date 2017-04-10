@@ -1,7 +1,9 @@
-section.anketa {$input_width: 538px;
+section.anketa {
+	$input_width: 538px;
 	padding-top: $header_height + 40px;
 	padding-bottom: 40px;
-	.wrapper {@extend %shim;
+	.wrapper {
+		@extend %shim;
 		position: relative;
 		background-image: url(../images/slide.jpg);
 		background-attachment: fixed;
@@ -9,28 +11,32 @@ section.anketa {$input_width: 538px;
 		padding-top: 40px;
 		color: $font-light;
 		border: 2px solid $bd_dark;
-		.h2 {position: relative;
-		text-align: center;
-		margin-bottom: 40px;}
+		.h2 {
+			position: relative;
+			text-align: center;
+			margin-bottom: 40px;
+			@include hover_underline_min(-15px, $bg_light, 2px, 200px);
+		}
 		form {
 			position: relative;
 			@extend %clear;
-			
-			label {float: left;
-	
-			display: block;
+			label {
+				float: left;
+				display: block;
 				margin: 20px 20px;
 			}
-			input {display: block;
+			input {font-size: 18px;
+				display: block;
 				height: 40px;
 				border: 1px solid $bd_dark;
-				margin-top: 20px;				
+				margin-top: 20px;
 				padding-left: 20px;
 				font-family: Regular;
 				background-color: $bg_light;
 				width: $input_width;
 			}
-			textarea {float: left;
+			textarea {font-size: 18px;
+				float: left;
 				padding-left: 20px;
 				padding-top: 20px;
 				background-color: $bg_light;
@@ -43,7 +49,8 @@ section.anketa {$input_width: 538px;
 				margin-right: 20px;
 				font-family: Regular;
 			}
-			button {float: left;
+			button {
+				float: left;
 				width: 300px;
 				height: 40px;
 				margin-top: 40px;

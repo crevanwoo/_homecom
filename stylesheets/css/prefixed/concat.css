@@ -20,14 +20,14 @@ git https://github.com/crevanwoo
 
 /*Elem sizes */
 /*Breakpoints*/
-.modal_window .modal_content, header .wrapper, .categories .wrapper, .preferences ul, footer .wrapper, footer .footer_form form, .category_results .results_content .single_result, section.anketa .wrapper form {
+.modal_window .modal_content, header .wrapper, .categories .wrapper, .preferences ul, footer .wrapper, footer .footer_form form, .category_results .results_content .single_result, section.anketa .wrapper form, section.contacts .wrapper .contacts_items {
   position: relative; }
-  .modal_window .modal_content:after, header .wrapper:after, .categories .wrapper:after, .preferences ul:after, footer .wrapper:after, footer .footer_form form:after, .category_results .results_content .single_result:after, section.anketa .wrapper form:after {
+  .modal_window .modal_content:after, header .wrapper:after, .categories .wrapper:after, .preferences ul:after, footer .wrapper:after, footer .footer_form form:after, .category_results .results_content .single_result:after, section.anketa .wrapper form:after, section.contacts .wrapper .contacts_items:after {
     content: '';
     display: block;
     clear: both; }
 
-.modal_window:before, .jumbotron .bg:before, footer:before, .category_results:before, section.anketa .wrapper:before {
+.modal_window:before, .jumbotron .bg:before, footer:before, .category_results:before, section.anketa .wrapper:before, section.about:before {
   content: '';
   position: absolute;
   top: 0;
@@ -520,16 +520,16 @@ footer {
         footer .footer_form .input input.error {
           position: relative;
           text-decoration: underline;
-          border-color: darkred; }
+          border-color: #8b0000 !important; }
           footer .footer_form .input input.error + span {
             position: absolute;
             margin-top: 10px;
             padding: 5px;
             font-size: 10px;
             text-transform: uppercase;
-            color: darkred;
+            color: #8b0000;
             background-color: ivory;
-            border: 1px solid darkred; }
+            border: 1px solid #8b0000; }
     footer .footer_form button {
       text-align: center;
       display: block;
@@ -725,7 +725,23 @@ section.anketa {
     section.anketa .wrapper .h2 {
       position: relative;
       text-align: center;
-      margin-bottom: 40px; }
+      margin-bottom: 40px;
+      position: relative; }
+      section.anketa .wrapper .h2:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 2px;
+        left: 50%;
+        bottom: -15px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        background-color: ivory;
+        margin-left: 0; }
+      section.anketa .wrapper .h2:hover:after {
+        margin-left: -100px;
+        width: 200px; }
     section.anketa .wrapper form {
       position: relative; }
       section.anketa .wrapper form label {
@@ -733,6 +749,7 @@ section.anketa {
         display: block;
         margin: 20px 20px; }
       section.anketa .wrapper form input {
+        font-size: 18px;
         display: block;
         height: 40px;
         border: 1px solid #2e1706;
@@ -742,6 +759,7 @@ section.anketa {
         background-color: ivory;
         width: 538px; }
       section.anketa .wrapper form textarea {
+        font-size: 18px;
         float: left;
         padding-left: 20px;
         padding-top: 20px;
@@ -767,3 +785,102 @@ section.anketa {
         background-color: ivory;
         text-transform: uppercase;
         color: #2e1706; }
+
+section.about {
+  position: relative;
+  padding-top: 130px;
+  background-image: url(../images/footer.jpg);
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-size: auto 100%;
+  line-height: 150%; }
+  section.about .top_part {
+    position: relative;
+    background-color: ivory;
+    border: 2px solid #2e1706;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px; }
+    section.about .top_part .h2 {
+      margin-bottom: 60px;
+      text-align: center;
+      position: relative; }
+      section.about .top_part .h2:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 2px;
+        left: 50%;
+        bottom: -15px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        background-color: #2e1706;
+        margin-left: 0; }
+      section.about .top_part .h2:hover:after {
+        margin-left: -100px;
+        width: 200px; }
+    section.about .top_part .text_m {
+      text-indent: 30px;
+      margin-bottom: 20px; }
+  section.about .bottom_part {
+    padding: 40px 0;
+    position: relative;
+    background-color: #2e1706;
+    color: ivory;
+    text-indent: 30px; }
+
+section.contacts {
+  padding-top: 130px;
+  padding-bottom: 60px; }
+  section.contacts .wrapper {
+    border: 2px solid #2e1706;
+    padding-top: 40px; }
+    section.contacts .wrapper .h2 {
+      text-align: center;
+      position: relative; }
+      section.contacts .wrapper .h2:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 2px;
+        left: 50%;
+        bottom: -15px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        background-color: #2e1706;
+        margin-left: 0; }
+      section.contacts .wrapper .h2:hover:after {
+        margin-left: -100px;
+        width: 200px; }
+    section.contacts .wrapper .text_m {
+      text-align: center;
+      padding: 40px 100px; }
+    section.contacts .wrapper .contacts_items {
+      margin-top: 60px;
+      margin-bottom: 40px;
+      padding: 0 100px; }
+      section.contacts .wrapper .contacts_items li {
+        float: left;
+        width: 33.33%;
+        padding-left: 10px;
+        padding-right: 40px;
+        position: relative;
+        height: 60px;
+        text-align: right; }
+        section.contacts .wrapper .contacts_items li a {
+          cursor: pointer; }
+        section.contacts .wrapper .contacts_items li span.fa {
+          position: absolute;
+          font-size: 25px;
+          top: 0;
+          right: 0; }
+  section.contacts .map_wrapper {
+    margin-top: 60px;
+    padding: 0; }
+  section.contacts #map {
+    width: 100%;
+    height: 600px; }

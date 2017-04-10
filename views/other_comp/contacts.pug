@@ -1,0 +1,20 @@
+// contacts begins
+
+section.contacts
+	div.wrapper
+		h2.h2 Контакты
+		p.text_m= lorem_mid
+		ul.contacts_items
+			-for(var i =0; i< 6; i++)
+				li 
+					a= contacts_text[i]
+					span(class="fa " + contacts_icons[i])
+					
+	div.wrapper.map_wrapper
+		div#map
+			script(defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnNrOHa4lGSaayw4D28OuLAe891ip0nkE&callback=initMap")
+				
+		
+
+
+// contacts ends

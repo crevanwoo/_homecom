@@ -50,7 +50,7 @@ footer {
 				&.error {
 					position: relative;
 					text-decoration: underline;
-					border-color: $bd_error;
+					border-color: $bd_error !important;
 					&+span {
 						position: absolute;
 						margin-top: 10px;

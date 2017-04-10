@@ -25,13 +25,12 @@ $c_brown: rgba(46, 23, 6, 1);
 //font
 $font_light: $c_cream;
 $font_dark: $c_brown;
-$font_error: darkred;
+$font_error: #8b0000;
 //bg
 $bg_light: $c_cream;
 $bg_dark: $c_brown;
-
 //border
-$bd_error: darkred;
+$bd_error:#8b0000;
 $bd_light: $c_cream;
 $bd_dark: $c_brown;
 
@@ -148,7 +147,6 @@ $tablet: 500px;
 		transition: $trans;
 		background-color: $background;
 		margin-left: 0;
-	
 	}
 	&:hover {
 		&:after {
@@ -157,4 +155,3 @@ $tablet: 500px;
 		}
 	}
 }
-
